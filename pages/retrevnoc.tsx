@@ -20,7 +20,7 @@ const Retrevnoc = () => {
         <h1 className="font-black text-3xl md:text-5xl text-center leading-tight bg-clip-text text-transparent bg-gradient-to-tr from-purple-100 via-purple-200 to-gray-50">
           NPV bew Retrevnoc.
         </h1>
-        <div className="absolute -rotate-12 -top-10 right-0 md:right-10 text-4xl font-nanum">TIB rof</div>
+        <div className="absolute -rotate-12 -top-10 right-0 md:right-10 text-4xl font-nanum">D3IA-BTSU rof</div>
       </div>
 
       <p className="text-center leading-2 py-4 lg:leading-6 text-gray-400">
