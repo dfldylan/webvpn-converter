@@ -12,7 +12,7 @@ import {
 
 import { decryptUrl, encryptUrl } from '../lib/convert'
 
-const prefix = { web: 'http://n.ustb.edu.cn', lib: 'http://n.sdvpn.ustb-ai3d.cn' }
+const prefix = { web: 'http://n.ustb.edu.cn',web_sd: 'http://sdvpn.ustb-ai3d.cn', sd: 'http://n.sdvpn.ustb-ai3d.cn',sd_bj: 'http://h.sdvpn.ustb-ai3d.cn' }
 
 const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
   const [enteredUrl, setEnteredUrl] = useState('')
@@ -76,18 +76,40 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
                 encrypt(enteredUrl, prefix.web)
               }}
             >
-              USTB Beijing
+              USTB Beijing from outside
             </button>
             <button
               className={`rounded opacity-80 hover:opacity-100 transition-all duration-150 ${
-                urlPrefix === prefix.lib ? 'bg-zinc-900' : 'bg-zinc-700'
+                urlPrefix === prefix.web_sd ? 'bg-zinc-900' : 'bg-zinc-700'
               }`}
               onClick={() => {
-                setUrlPrefix(prefix.lib)
-                encrypt(enteredUrl, prefix.lib)
+                setUrlPrefix(prefix.web_sd)
+                encrypt(enteredUrl, prefix.web_sd)
               }}
             >
-              USTB Shunde
+              USTB Shunde from USTB Shunde
+            </button>
+            <button
+              className={`rounded opacity-80 hover:opacity-100 transition-all duration-150 ${
+                urlPrefix === prefix.sd ? 'bg-zinc-900' : 'bg-zinc-700'
+              }`}
+              onClick={() => {
+                setUrlPrefix(prefix.sd)
+                encrypt(enteredUrl, prefix.sd)
+              }}
+            >
+              USTB Shunde from Internet
+            </button>
+            <button
+              className={`rounded opacity-80 hover:opacity-100 transition-all duration-150 ${
+                urlPrefix === prefix.sd_bj ? 'bg-zinc-900' : 'bg-zinc-700'
+              }`}
+              onClick={() => {
+                setUrlPrefix(prefix.sd_bj)
+                encrypt(enteredUrl, prefix.sd_bj)
+              }}
+            >
+              USTB Shunde from USTB Beijing
             </button>
           </div>
         )}
