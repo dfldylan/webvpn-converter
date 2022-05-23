@@ -12,7 +12,7 @@ import {
 
 import { decryptUrl, encryptUrl } from '../lib/convert'
 
-const prefix = { web: 'https://n.ustb.edu.cn', lib: 'https://libvpn.ustb.edu.cn' }
+const prefix = { web: 'http://n.ustb.edu.cn', lib: 'http://n.sdvpn.ustb-ai3d.cn' }
 
 const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
   const [enteredUrl, setEnteredUrl] = useState('')
@@ -76,7 +76,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
                 encrypt(enteredUrl, prefix.web)
               }}
             >
-              Web VPN
+              USTB北京校区
             </button>
             <button
               className={`rounded opacity-80 hover:opacity-100 transition-all duration-150 ${
@@ -87,7 +87,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
                 encrypt(enteredUrl, prefix.lib)
               }}
             >
-              Library VPN
+              USTB顺德校区
             </button>
           </div>
         )}
