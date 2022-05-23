@@ -46,7 +46,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
       <label className="text-xs font-medium uppercase tracking-wider text-gray-300">Original URL</label>
       <input
         type="url"
-        placeholder={reverse ? 'http://n.ustb.edu.cn/...' : '(http|ssh|rdp|vnc)://<ip>:<port>/'}
+        placeholder={reverse ? 'http://n.ustb.edu.cn/...' : '(http|https|ssh|rdp|vnc)://<ip>:<port>/'}
         onChange={e => {
           setUserEntering(true)
           setEnteredUrl(e.target.value)
