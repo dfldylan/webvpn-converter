@@ -76,7 +76,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
                 encrypt(enteredUrl, prefix.web)
               }}
             >
-              USTB北京校区
+              USTB Beijing
             </button>
             <button
               className={`rounded opacity-80 hover:opacity-100 transition-all duration-150 ${
@@ -87,7 +87,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
                 encrypt(enteredUrl, prefix.lib)
               }}
             >
-              USTB顺德校区
+              USTB Shunde
             </button>
           </div>
         )}
