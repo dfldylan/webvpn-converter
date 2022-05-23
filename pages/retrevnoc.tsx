@@ -14,7 +14,7 @@ const Retrevnoc = () => {
         <title>Web VPN - retrevnoc</title>
       </Head>
 
-      <ShootingStars reverse />
+      {/* <ShootingStars reverse /> */}
 
       <div className="relative">
         <h1 className="font-black text-3xl md:text-5xl text-center leading-tight bg-clip-text text-transparent bg-gradient-to-tr from-purple-100 via-purple-200 to-gray-50">

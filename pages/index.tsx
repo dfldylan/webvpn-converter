@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <title>Web VPN - converter</title>
       </Head>
 
-      <ShootingStars />
+      {/* <ShootingStars /> */}
 
       <div className="relative">
         <h1 className="font-black text-3xl md:text-5xl text-center leading-tight bg-clip-text text-transparent bg-gradient-to-tr from-orange-100 via-orange-200 to-gray-50">
