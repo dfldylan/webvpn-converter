@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { encryptUrl } from '../../lib/convert'
 
-const prefixOptions = { web: 'https://n.ustb.edu.cn', lib: 'https://libvpn.ustb.edu.cn' } as const
+const prefixOptions = { web: 'http://n.ustb.edu.cn',web_sd: 'http://sdvpn.ustb-ai3d.cn', sd: 'http://n.sdvpn.ustb-ai3d.cn',sd_bj: 'http://h.sdvpn.ustb-ai3d.cn' } as const
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // request like /api/https%3A%2F%2Fustb.edu.cn?prefix=web|lib&redirect=true|false
