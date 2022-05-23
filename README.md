@@ -18,7 +18,7 @@ Note that `ENCODED_URL` must be URL encoded.
 
 ### Optional params
 
-* `prefix`: Must be one of `web` (default) or `lib`. Adds either `webvpn.ustb.edu.cn` or `libvpn.ustb.edu.cn` as prefix to the URL.
+* `prefix`: Must be one of `web` (default) or `lib`. Adds either `n.ustb.edu.cn` or `libvpn.ustb.edu.cn` as prefix to the URL.
 * `redirect`: Either `true` or `false` (default). If `true`, the client will be redirected to the converted/encrypted URL directly.
 
 ### Example
@@ -29,7 +29,7 @@ GET /api/https%3A%2F%2Fustb.edu.cn?prefix=web&redirect=false
 
 ```json
 {
-  "url": "https://webvpn.ustb.edu.cn/https/77726476706e69737468656265737421f2fe55d222347d1e7d06"
+  "url": "https://n.ustb.edu.cn/https/77726476706e69737468656265737421f2fe55d222347d1e7d06"
 }
 ```
 
