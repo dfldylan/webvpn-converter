@@ -46,7 +46,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
       <label className="text-xs font-medium uppercase tracking-wider text-gray-300">Original URL</label>
       <input
         type="url"
-        placeholder={reverse ? 'https://n.ustb.edu.cn/...' : 'https://...'}
+        placeholder={reverse ? 'http://n.ustb.edu.cn/...' : 'http|ssh|rdp|vnc://ip:port/'}
         onChange={e => {
           setUserEntering(true)
           setEnteredUrl(e.target.value)
@@ -76,7 +76,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
                 encrypt(enteredUrl, prefix.web)
               }}
             >
-              USTB Beijing from outside
+              USTB-Beijing from outside
             </button>
             <button
               className={`rounded opacity-80 hover:opacity-100 transition-all duration-150 ${
@@ -87,7 +87,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
                 encrypt(enteredUrl, prefix.web_sd)
               }}
             >
-              USTB Shunde from USTB Shunde
+              USTB-Shunde from USTB Shunde
             </button>
             <button
               className={`rounded opacity-80 hover:opacity-100 transition-all duration-150 ${
@@ -98,7 +98,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
                 encrypt(enteredUrl, prefix.sd)
               }}
             >
-              USTB Shunde from Internet
+              USTB-Shunde from Internet
             </button>
             <button
               className={`rounded opacity-80 hover:opacity-100 transition-all duration-150 ${
@@ -109,7 +109,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
                 encrypt(enteredUrl, prefix.sd_bj)
               }}
             >
-              USTB Shunde from USTB Beijing
+              USTB-Shunde from USTB Beijing
             </button>
           </div>
         )}
