@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { encryptUrl } from '../../lib/convert'
 
-const prefixOptions = { web: 'https://webvpn.bit.edu.cn', lib: 'https://libvpn.bit.edu.cn' } as const
+const prefixOptions = { web: 'https://webvpn.ustb.edu.cn', lib: 'https://libvpn.ustb.edu.cn' } as const
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  // request like /api/https%3A%2F%2Fbit.edu.cn?prefix=web|lib&redirect=true|false
+  // request like /api/https%3A%2F%2Fustb.edu.cn?prefix=web|lib&redirect=true|false
   const { url, prefix = 'web', redirect = 'false' } = req.query
 
   // if prefix is not one of web or lib, return invalid request

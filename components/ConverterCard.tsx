@@ -12,7 +12,7 @@ import {
 
 import { decryptUrl, encryptUrl } from '../lib/convert'
 
-const prefix = { web: 'https://webvpn.bit.edu.cn', lib: 'https://libvpn.bit.edu.cn' }
+const prefix = { web: 'https://webvpn.ustb.edu.cn', lib: 'https://libvpn.ustb.edu.cn' }
 
 const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
   const [enteredUrl, setEnteredUrl] = useState('')
@@ -46,7 +46,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
       <label className="text-xs font-medium uppercase tracking-wider text-gray-300">Original URL</label>
       <input
         type="url"
-        placeholder={reverse ? 'https://webvpn.bit.edu.cn/...' : 'https://...'}
+        placeholder={reverse ? 'https://webvpn.ustb.edu.cn/...' : 'https://...'}
         onChange={e => {
           setUserEntering(true)
           setEnteredUrl(e.target.value)
