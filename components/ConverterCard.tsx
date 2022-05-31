@@ -12,7 +12,7 @@ import {
 
 import { decryptUrl, encryptUrl } from '../lib/convert'
 
-const prefix = { web: 'http://n.ustb.edu.cn',web_sd: 'http://sdvpn.ustb-ai3d.cn', sd: 'http://n.sdvpn.ustb-ai3d.cn',sd_bj: 'http://h.sdvpn.ustb-ai3d.cn' }
+const prefix = { web: 'http://n.ustb.edu.cn',web_sd: 'http://sdvpn.sd.ustb-ai3d.cn:10001', sd: 'http://n.sdvpn.ustb-ai3d.cn',sd_bj: 'http://h.sdvpn.ustb-ai3d.cn' }
 
 const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
   const [enteredUrl, setEnteredUrl] = useState('')
@@ -80,6 +80,17 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
             </button>
             <button
               className={`rounded opacity-80 hover:opacity-100 transition-all duration-150 ${
+                urlPrefix === prefix.sd_bj ? 'bg-zinc-900' : 'bg-zinc-700'
+              }`}
+              onClick={() => {
+                setUrlPrefix(prefix.sd_bj)
+                encrypt(enteredUrl, prefix.sd_bj)
+              }}
+            >
+              USTB-Shunde from USTB Beijing
+            </button>
+            <button
+              className={`rounded opacity-80 hover:opacity-100 transition-all duration-150 ${
                 urlPrefix === prefix.web_sd ? 'bg-zinc-900' : 'bg-zinc-700'
               }`}
               onClick={() => {
@@ -87,7 +98,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
                 encrypt(enteredUrl, prefix.web_sd)
               }}
             >
-              USTB-Shunde from USTB Shunde
+              USTB-Shunde from Others
             </button>
             <button
               className={`rounded opacity-80 hover:opacity-100 transition-all duration-150 ${
@@ -98,18 +109,7 @@ const ConverterCard = ({ reverse = false }: { reverse?: boolean }) => {
                 encrypt(enteredUrl, prefix.sd)
               }}
             >
-              USTB-Shunde from Internet
-            </button>
-            <button
-              className={`rounded opacity-80 hover:opacity-100 transition-all duration-150 ${
-                urlPrefix === prefix.sd_bj ? 'bg-zinc-900' : 'bg-zinc-700'
-              }`}
-              onClick={() => {
-                setUrlPrefix(prefix.sd_bj)
-                encrypt(enteredUrl, prefix.sd_bj)
-              }}
-            >
-              USTB-Shunde from USTB Beijing
+              USTB-Shunde from Others(backup)
             </button>
           </div>
         )}
